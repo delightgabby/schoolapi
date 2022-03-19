@@ -1,7 +1,7 @@
-// require("dotenv").config()
+require("dotenv").config()
 const express = require("express")
-// const port =process.env.PORT ||2070
-const port = 2070
+const port =process.env.PORT ||2070
+// const port = 2070
 const app = express()
 const myRoute = require("./Router/Router")
 const mongoose = require("mongoose")
@@ -17,9 +17,9 @@ mongoose.connect(url).then(()=>{
 })
 
 
-// app.get('/', (req, res)=>{
-//     res.status(200).json({message: `running on port ${port}`})
-// })
+app.get('/', (req, res)=>{
+    res.status(200).json({message: `running on port ${port}`})
+})
 
 // app.get('/', (req, res)=>{
 //     res.status(200).json({
